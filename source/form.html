@@ -2,7 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -13,24 +15,24 @@
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
+          <ul class="main-nav__list site-list list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="site-list__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="photo.html">Фото и видео</a>
+              <a class="site-list__link" href="photo.html">Фото и видео</a>
             </li>
             <li class="site-list__item site-list__item--active">
-              <a>Форма отзыва</a>
+              <a class="site-list__link">Форма отзыва</a>
             </li>
             <li class="site-list__item">
-              <a href="#">HTML academy</a>
+              <a class="site-list__link" href="#">HTML academy</a>
             </li>
           </ul>
         </div>
       </nav>
-      <div class="header-image">
-        <img class="header-image__landscape" src="back-mobile.jpg" width="320" height="389" alt="Природа города Седона">
+      <div class="header-image header-image--inner">
+        <img class="header-image__tagline-inner" src="img/text-sedona.svg" width="229" height="39" alt="Добро пожаловать в Седону">
       </div>
     </header>
 
@@ -42,7 +44,7 @@
       <div class="page-footer__wrapper">
         <b class="page-footer__hashtag">#VISITSEDONA</b>
         <div class="page-footer__social social">
-          <ul class="social__list">
+          <ul class="social__list list">
             <li class="social__item">
               <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">Мы в Твиттере</a>
             </li>

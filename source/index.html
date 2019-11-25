@@ -2,7 +2,11 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -13,71 +17,74 @@
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
+          <ul class="main-nav__list site-list list">
             <li class="site-list__item site-list__item--active">
-              <a>Главная</a>
+              <a class="site-list__link">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="photo.html">Фото и видео</a>
+              <a class="site-list__link" href="photo.html">Фото и видео</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Форма отзыва</a>
+              <a class="site-list__link" href="form.html">Форма отзыва</a>
             </li>
             <li class="site-list__item">
-              <a href="#">HTML academy</a>
+              <a class="site-list__link" href="#">HTML academy</a>
             </li>
           </ul>
         </div>
       </nav>
-      <div class="header-image">
-        <img class="header-image__tagline" src="img/text-index.svg" width="282" height="214" alt="Добро пожаловать в Седону">
-        <img class="header-image__landscape" src="back-mobile.jpg" width="320" height="389" alt="Природа города Седона">
+      <div class="header-image header-image--index">
+        <img class="header-image__tagline-index" src="img/text-sedona-index.svg" width="282" height="214" alt="Добро пожаловать в Седону">
       </div>
     </header>
 
     <main class="page-main">
-      <h1 class="page-main__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+      <h1 class="page-main__title title-black">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
       <section class="advantages">
         <h2 class="advantages__title">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
-        <ul class="advantages__list sedona-list">
-          <li class="advantages__item advantages__item--blue authentic">
+        <ul class="advantages__list sedona-list list">
+          <li class="advantages__item authentic">
+            <div class="advantages__wrap">
             <h3 class="sedona-list__title">Настоящий городок</h3>
             <p class="advantages__text">— №1 —</p>
             <p class="advantages__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+            </div>
             <img src="photo-city.jpg" width="320" height="260" alt="Жизнь города Седона">
-            <ul class="authentic__list">
+            <ul class="authentic__list list">
               <li class="authentic__item authentic__item--accommodation">
-                <h4 class="authentic__title">Жилье</h4>
+                <h4 class="authentic__title title-black">Жилье</h4>
                 <p class="authentic__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </li>
               <li class="authentic__item authentic__item--souvenirs">
-                <h4 class="authentic__title">Сувениры</h4>
+                <h4 class="authentic__title title-black">Сувениры</h4>
                 <p class="authentic__text">Не только китайского, но и местного производства!</p>
               </li>
               <li class="authentic__item authentic__item--meal">
-                <h4 class="authentic__title">Еда</h4>
+                <h4 class="authentic__title title-black">Еда</h4>
                 <p class="authentic__text">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
               </li>
             </ul>
           </li>
-          <li class="advantages__item advantages__item--blue">
+          <li class="advantages__item">
+            <div class="advantages__wrap">
             <h3 class="sedona-list__title">Там есть Мост Дьявола</h3>
             <p class="advantages__text">— №2 —</p>
             <p class="advantages__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+            </div>
             <img src="photo-bridge.jpg" width="320" height="260" alt="Мост Дьявола">
           </li>
-          <li class="advantages__item">
-            <h3 class="sedona-list__title">Небольшая площадь</h3>
+          <li class="advantages__item advantages__item--grey">
+            <h3 class="sedona-list__title title-black">Небольшая площадь</h3>
             <p class="advantages__text">— №3 —</p>
             <p class="advantages__text">Все интересные места находятся очень близко</p>
           </li>
-          <li class="advantages__item">
-            <h3 class="sedona-list__title">Красивая дорога</h3>
+          <li class="advantages__item advantages__item--grey">
+            <h3 class="sedona-list__title title-black">Красивая дорога</h3>
             <p class="advantages__text">— №4 —</p>
             <p class="advantages__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="advantages__item">
-            <h3 class="sedona-list__title">Мало туристов</h3>
+          <li class="advantages__item advantages__item--grey">
+            <h3 class="sedona-list__title title-black">Мало туристов</h3>
             <p class="advantages__text">— №5 —</p>
             <p class="advantages__text">Большинство едет в Гранд каньон и толпится там</p>
           </li>
@@ -87,9 +94,9 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <b class="page-footer__hashtag">#VISITSEDONA</b>
+        <b class="page-footer__hashtag title-black">#VISITSEDONA</b>
         <div class="page-footer__social social">
-          <ul class="social__list">
+          <ul class="social__list list">
             <li class="social__item">
               <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">Мы в Твиттере</a>
             </li>
