@@ -18,3 +18,50 @@
     padding-bottom: 38px;
   }
 }
+
+.advantages__photo--tablet,
+.advantages__photo--desktop {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__flex-wrapper {
+    display: flex;
+  }
+
+  .advantages__flex-wrapper--contra {
+    flex-direction: row-reverse;
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item-container {
+    width: 256px;
+  }
+
+  .advantages__photo--mobile {
+    display: none;
+  }
+
+  .advantages__photo--tablet {
+    display: block;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__item-container {
+    width: 400px;
+  }
+
+  .advantages__photo--tablet {
+    display: none;
+  }
+
+  .advantages__photo--desktop {
+    display: block;
+  }
+}

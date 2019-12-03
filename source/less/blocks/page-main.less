@@ -1,5 +1,35 @@
+.page-main__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .page-main__title {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__wrapper--index {
+    width: 768px;
+  }
+
+  .page-main__title {
+    font-size: 21px;
+    line-height: 26px;
+
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  .page-main__wrapper--inner {
+    width: 648px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__wrapper {
+    width: 1200px;
+  }
 }

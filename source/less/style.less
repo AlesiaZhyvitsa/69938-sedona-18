@@ -1,4 +1,5 @@
 body {
+  min-width: 320px;
   margin: 0;
   padding: 0;
 
@@ -10,7 +11,7 @@ body {
   text-align: center;
   color: #333333;
 
-  background-color: #ffffff;
+  background-color: #f2f2f2;
 }
 
 a {
@@ -21,6 +22,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+@tablet-width: 768px;
+@desktop-width: 1200px;
 
 @import 'blocks/visually-hidden.less';
 @import 'blocks/page-header.less';
@@ -39,3 +43,4 @@ img {
 @import 'blocks/list-item.less';
 @import 'blocks/title-black.less';
 @import 'blocks/list.less';
+@import 'blocks/site-background.less';
