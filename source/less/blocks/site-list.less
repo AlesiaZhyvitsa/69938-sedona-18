@@ -14,3 +14,31 @@
     color: #94b9d2;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .site-list__item {
+    background-color: #ffffff;
+    &:hover {
+      background-color: #ffffff;
+    }
+    &:focus {
+      background-color: #ffffff;
+    }
+  }
+
+  .site-list__link {
+    color: #000000;
+    &:hover {
+      color: #81b3d2;
+    }
+    &:focus {
+      color: rgba(0,0,0,0.3);
+    }
+  }
+
+}

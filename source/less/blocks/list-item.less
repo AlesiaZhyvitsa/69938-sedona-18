@@ -1,4 +1,5 @@
 .list-item {
+  width: 280px;
   text-align: left;
 }
 
@@ -10,4 +11,20 @@
 
 .list-item__text {
   text-transform: none;
+}
+
+@media (min-width: @tablet-width) {
+  .list-item {
+    width: 324px;
+
+    &:nth-child(1) {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .list-item {
+    width: 400px;
+  }
 }

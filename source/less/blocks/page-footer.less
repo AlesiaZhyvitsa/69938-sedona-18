@@ -1,5 +1,32 @@
+// Временно для сетки
+.page-footer {
+  margin-top: 50px;
+}
+
+.page-footer__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .page-footer__hashtag {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+
+    // Временно для сетки
+    justify-content: space-around;
+
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    width: 1200px;
+  }
 }
