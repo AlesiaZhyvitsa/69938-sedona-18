@@ -1,9 +1,45 @@
 .list-item {
   width: 280px;
   text-align: left;
+  margin: 0 auto;
+}
+
+.list-item__image-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -22px;
+    left: -20px;
+
+    width: 320px;
+    height: 1px;
+
+    background-color: #e5e5e5;
+  }
+}
+
+.list-item__image {
+  margin-bottom: 43px;
+}
+
+.list-item__description-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .list-item__title {
+  position: absolute;
+
+  top: 24px; //Временно
+  left: 0;
+  z-index: 10;
+
   font-size: 14px;
   line-height: 24px;
   font-weight: 700;
@@ -11,6 +47,30 @@
 
 .list-item__text {
   text-transform: none;
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+
+.list-item__like {
+  position: relative;
+
+  margin-left: 37px;
+  margin-bottom: 45px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -2px;
+    left: -37px;
+
+    width: 23px;
+    height: 21px;
+
+    background-image: url("../img/icon-like.svg");
+    background-repeat: no-repeat;
+    opacity: 30%;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -21,10 +81,65 @@
       width: 100%;
     }
   }
+
+  .list-item__image-wrap::before {
+    display: none;
+  }
+
+  .list-item__title {
+    top: 22px; //Временно
+    left: 22px;
+  }
+
+  .list-item__image {
+    margin-bottom: 0;
+  }
+
+  .list-item__description-wrap {
+    flex-direction: row;
+
+    background-color: #f2f2f2;
+  }
+
+  .gallery__item:nth-child(2n+3) .list-item__description-wrap {
+    background-color: #eaeaea;
+  }
+
+  .list-item__text {
+    margin-top: 41px;
+    margin-bottom: 18px;
+    margin-left: 22px;
+    margin-right: auto;
+  }
+
+  .list-item__like {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    margin-right: 22px;
+
+    &::before {
+      left: -32px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .list-item {
     width: 400px;
+  }
+
+  .list-item__title {
+    color: #ffffff;
+  }
+
+  .list-item__description-wrap,
+  .gallery__item:nth-child(2n+3) .list-item__description-wrap {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .list-item__like::before {
+    background-image: url("../img/icon-like-white.svg");
+    opacity: 100%;
   }
 }

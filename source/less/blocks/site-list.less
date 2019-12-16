@@ -1,5 +1,13 @@
 .site-list__item {
   background-color: #81b3d2;
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
+  &:first-child {
+    border-top: 1px solid #81b3d2;
+  }
+  &:last-child {
+    border-bottom: 1px solid #81b3d2;
+  }
   &:hover {
     background-color: #669ec0;
   }
@@ -9,6 +17,9 @@
 }
 
 .site-list__link {
+  display: inline-block;
+  padding-top: 7px;
+  padding-bottom: 7px;
   color: #ffffff;
   &:focus {
     color: #94b9d2;
@@ -18,14 +29,26 @@
 @media (min-width: @tablet-width) {
   .site-list {
     display: flex;
-    justify-content: space-around;
   }
 
   .site-list__item {
     background-color: #ffffff;
+    border: none;
+    width: 154px;
+    &:first-child {
+      border-top: none;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    &:nth-child(2) {
+      margin-right: auto;
+    }
+
     &:hover {
       background-color: #ffffff;
     }
+
     &:focus {
       background-color: #ffffff;
     }
@@ -33,6 +56,8 @@
 
   .site-list__link {
     color: #000000;
+    padding-top: 14px;
+    padding-bottom: 16px;
     &:hover {
       color: #81b3d2;
     }
@@ -41,4 +66,10 @@
     }
   }
 
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item {
+    width: 238px;
+  }
 }
