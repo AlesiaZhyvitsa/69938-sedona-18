@@ -1,6 +1,7 @@
 // Временно для сетки
 .page-footer {
   margin-top: 50px;
+  padding-bottom: 31px;
 }
 
 .page-footer__wrapper {
@@ -17,16 +18,24 @@
 @media (min-width: @tablet-width) {
   .page-footer__wrapper {
     display: flex;
-
-    // Временно для сетки
-    justify-content: space-around;
-
     width: 768px;
+  }
+  .page-footer {
+    margin-top: 36px;
+    padding-bottom: 36px;
+  }
+  .page-footer__hashtag {
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-right: auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer__wrapper {
     width: 1200px;
+  }
+  .page-footer__hashtag {
+    margin-left: 120px;
   }
 }

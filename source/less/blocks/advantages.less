@@ -1,14 +1,45 @@
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.advantages__item:first-child .advantages__wrap {
+  background-image: url("../img/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
 .advantages__title {
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
+
+  .text-mobile;
+  margin-bottom: 5px;
 }
 
-.advantages__item--grey {
+.advantages__item--colored {
   background-color: #eeeeee;
-  & .advantages__text:last-child {
-    padding-bottom: 26px;
+  & .advantages__text {
+    position: relative;
+    margin-bottom: -10px;
   }
+  & .advantages__text:last-child {
+    padding-bottom: 37px;
+  }
+}
+
+.advantages__item--colored .advantages__text::after {
+  content: "";
+  position: absolute;
+
+  top: 69px;
+  left: -15px;
+
+  width: 280px;
+  height: 1px;
+  background-color: #d6d6d6;
 }
 
 .advantages__wrap {
@@ -19,9 +50,22 @@
   }
 }
 
+.advantages__item--colored:last-child .advantages__text::after {
+  display: none;
+}
+
 .advantages__photo--tablet,
 .advantages__photo--desktop {
   display: none;
+}
+
+.advantages__text-number {
+  margin-bottom: 15px;
+}
+
+.advantages__item:first-child .advantages__text,
+.advantages__item:nth-child(2) .advantages__text {
+  padding-bottom: 39px;
 }
 
 @media (min-width: @tablet-width) {
@@ -34,8 +78,18 @@
   }
 
   .advantages__list {
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    & .sedona-list__title ~ .advantages__text {
+      padding-bottom: 44px;
+    }
+  }
+
+  .advantages__item--colored .sedona-list__title ~ .advantages__text {
+    padding-bottom: 54px;
+  }
+
+  .advantages__item:first-child .advantages__wrap {
+    background-image: none;
   }
 
   .advantages__item-container {
@@ -50,6 +104,18 @@
     display: block;
   }
 
+  .advantages__title {
+    .text-tablet;
+    margin-bottom: 50px;
+  }
+
+  .advantages__text-number {
+    margin-bottom: 21px;
+  }
+
+  .advantages__item--colored .advantages__text::after {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {

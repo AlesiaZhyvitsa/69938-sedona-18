@@ -1,6 +1,21 @@
+.gallery__text {
+  .text-mobile();
+  margin-bottom: 54px;
+}
+
 @media (min-width: @tablet-width) {
   .gallery__list {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .gallery__text {
+    .text-tablet();
+    margin-bottom: 72px;
+  }
+
+  .gallery__item:last-child {
+    margin-right: auto;
+    margin-left: 0;
   }
 }

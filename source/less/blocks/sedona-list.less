@@ -1,6 +1,38 @@
 .sedona-list__title {
   padding-top: 39px;
+  margin-bottom: -5px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+}
+
+.advantages__item:first-child .sedona-list__title {
+  padding-top: 77px;
+}
+
+.advantages__item--colored .sedona-list__title {
+  padding-top: 27px;
+}
+
+.advantages__item:nth-child(4) .sedona-list__title,
+.advantages__item:nth-child(5) .sedona-list__title {
+  margin-top: 1px;
+}
+
+@media (min-width: @tablet-width) {
+  .sedona-list__title {
+    font-size: 21px;
+  }
+
+  .advantages__item .sedona-list__title,
+  .advantages__item:first-child .sedona-list__title {
+    padding-top: 45px;
+    margin-bottom: -4px;
+  }
+
+  .advantages__item .sedona-list__title {
+    width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

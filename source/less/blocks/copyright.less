@@ -1,3 +1,50 @@
+.copyright {
+  position: relative;
+  display: flex;
+  width: 145px;
+  margin-left: 95px;
+}
+
 .copyright__text {
   font-weight: 400;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    margin-left: auto;
+    margin-right: 50px;
+    margin-top: 13px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    margin-right: 110px;
+  }
+}
+
+.copyright__link {
+  position: absolute;
+  top: -14px;
+  right: 6px;
+
+  display: block;
+  width: 50px;
+  height: 50px;
+
+  background-color: #ffffff;
+}
+
+.copyright__link::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 11px;
+
+  width: 27px;
+  height: 34px;
+
+  background-image: url("../img/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
 }

@@ -7,6 +7,19 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+
+  .text-mobile;
+  margin-top: 40px;
+  margin-bottom: 27px;
+}
+
+.page-main__text-container {
+  .text-mobile;
+  margin: 0 auto;
+}
+
+.advantages__item--colored .page-main__text-container {
+  width: 250px;
 }
 
 @media (min-width: @tablet-width) {
@@ -21,15 +34,33 @@
     width: 450px;
     margin: 0 auto;
     margin-top: 50px;
+    margin-bottom: 28px;
   }
 
   .page-main__wrapper--inner {
     width: 648px;
+  }
+
+  .page-main__title--inner {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .page-main__text-container,
+  .advantages__item--colored .page-main__text-container {
+    width: 170px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__wrapper {
     width: 1200px;
+  }
+  .page-main__text-container {
+    width: 300px;
+  }
+  .page-main__text-container,
+  .advantages__item--colored .page-main__text-container {
+    width: 290px;
   }
 }
