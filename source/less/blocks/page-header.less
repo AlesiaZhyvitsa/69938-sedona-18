@@ -14,13 +14,9 @@
   z-index: 10;
 }
 
-.page-header__logo-image--mobile {
+.page-header__logo img {
   top: -56px;
   left: 43px;
-}
-
-.page-header__logo-image--desktop {
-  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -33,12 +29,13 @@
   .page-header__wrapper {
     width: 1200px;
   }
-  .page-header__logo-image--mobile {
-    display: none;
-  }
-  .page-header__logo-image--desktop {
+
+  .page-header__logo img {
     display: block;
     top: -56px;
     left: 0;
+
+    width: 188px;
+    height: 96px;
   }
 }

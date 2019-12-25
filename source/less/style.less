@@ -25,6 +25,7 @@ img {
 
 @tablet-width: 768px;
 @desktop-width: 1200px;
+@retina-dppx: 1.5dppx;
 
 .text-mobile() {
   width: 270px;
@@ -36,8 +37,6 @@ img {
   margin: 0 auto;
 }
 
-@import 'blocks/visually-hidden.less';
-@import 'blocks/nowrap.less';
 @import 'blocks/page-header.less';
 @import 'blocks/main-nav.less';
 @import 'blocks/site-list.less';
@@ -52,6 +51,6 @@ img {
 
 @import 'blocks/gallery.less';
 @import 'blocks/list-item.less';
-@import 'blocks/title-accented.less';
-@import 'blocks/list.less';
 @import 'blocks/site-background.less';
+
+@import 'helpers.less';
