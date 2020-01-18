@@ -17,13 +17,6 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .social__item {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
-
 .social__link {
   position: absolute;
 
@@ -35,6 +28,14 @@
   height: 48px;
 
   background-color: #81b3d2;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:focus {
+    background-color: #5496bd;
+  }
 }
 
 .social__link--twitter::before {
@@ -49,6 +50,12 @@
 
   background-image: url("../img/icon-twitter-white.svg");
   background-repeat: no-repeat;
+}
+
+.social__link--twitter:focus::before,
+.social__link--facebook:focus::before,
+.social__link--youtube:focus::before {
+  opacity: 0.5;
 }
 
 .social__link--facebook::before {
@@ -77,4 +84,11 @@
 
   background-image: url("../img/icon-youtube-white.svg");
   background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .social__item {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
