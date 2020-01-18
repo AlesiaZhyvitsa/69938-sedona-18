@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
 
@@ -47,8 +47,94 @@
       </header>
 
       <main class="page-main">
-        <div class="page-main__wrapper page-main__wrapper--inner">
-
+        <div class="page-main__wrapper page-main__wrapper--form">
+          <h1 class="page-main__title page-main__title--inner">Оставьте свой отзыв</h1>
+          <p class="page-main__paragraph page-main__paragraph--form">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <section class="feedback">
+            <h2 class="visually-hidden">Форма отзыва</h2>
+            <form class="feedback__form feedback-form" method="get" action="https://echo.htmlacademy.ru">
+              <fieldset class="feedback-form__unit feedback-form__unit--name">
+                <legend class="feedback-form__title feedback-form__title--name">Представьтесь:</legend>
+                <p>
+                  <label for="user-name">ИМЯ*:</label>
+                  <input class="feedback-form__text" id="user-name" type="text" name="name" placeholder="Петр">
+                </p>
+                <p>
+                  <label for="user-surname">ФАМИЛИЯ*:</label>
+                  <input class="feedback-form__text" id="user-surname" type="text" name="surname" placeholder="Иванов">
+                </p>
+                <p>
+                  <label for="user-patronymic">Отчество:</label>
+                  <input class="feedback-form__text" id="user-patronymic" type="text" name="patronymic" placeholder="Александрович">
+                </p>
+              </fieldset>
+              <fieldset class="feedback-form__unit feedback-form__unit--contacts">
+                <legend class="feedback-form__title feedback-form__title--contacts">Контактная информация:</legend>
+                <div class="feedback-form__wrap-contacts">
+                  <p class="feedback-form__paragraph feedback-form__paragraph--phone">
+                    <label class="feedback-form__label-contacts" for="user-phone"><span class="feedback-form__hidden-contacts">Контактный</span> телефон*:</label>
+                    <input class="feedback-form__text" id="user-phone" type="text" name="phone" placeholder="Введите телефон">
+                  </p>
+                  <p class="feedback-form__paragraph feedback-form__paragraph--mail">
+                    <label class="feedback-form__label-contacts" for="user-mail">Электронная почта*:</label>
+                    <input class="feedback-form__text" id="user-mail" type="text" name="mail" placeholder="Введите e-mail">
+                  </p>
+                </div>
+              </fieldset>
+              <fieldset class="feedback-form__unit feedback-form__unit--impression">
+                <legend class="feedback-form__title feedback-form__title--impression">Ваше общее впечатление:</legend>
+                <ul class="feedback-form__list list-reset">
+                  <li class="feedback-form__option feedback-form__option--impression">
+                    <input class="visually-hidden feedback-form__input feedback-form__input-radio" type="radio" name="impression" value="positive" id="impression-positive" checked>
+                    <label for="impression-positive" class="feedback-form__label-options">Скорее положительное</label>
+                  </li>
+                  <li class="feedback-form__option feedback-form__option--impression">
+                    <input class="visually-hidden feedback-form__input feedback-form__input-radio" type="radio" name="impression" value="negative" id="impression-negative">
+                    <label for="impression-negative" class="feedback-form__label-options">Скорее отрицательное</label>
+                  </li>
+                  <li class="feedback-form__option feedback-form__option--impression">
+                    <input class="visually-hidden feedback-form__input feedback-form__input-radio" type="radio" name="impression" value="indefinite" id="impression-indefinite">
+                    <label for="impression-indefinite" class="feedback-form__label-options">Затрудняюсь ответить</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="feedback-form__unit feedback-form__unit--sights">
+                <legend class="feedback-form__title feedback-form__title--sights">Посещенные достопримечательности:</legend>
+                <ul class="feedback-form__list feedback-form__list--sights list-reset">
+                  <li class="feedback-form__option feedback-form__option--sights">
+                    <input class="visually-hidden feedback-form__input feedback-form__input-checkbox" type="checkbox" name="bridge" id="sight-bridge" checked>
+                    <label for="sight-bridge" class="feedback-form__label-options">Мост Дьявола</label>
+                  </li>
+                  <li class="feedback-form__option feedback-form__option--sights">
+                    <input class="visually-hidden feedback-form__input feedback-form__input-checkbox" type="checkbox" name="mountain" id="sight-mountain" checked>
+                    <label for="sight-mountain" class="feedback-form__label-options">Гора-Колокол</label>
+                  </li>
+                  <li class="feedback-form__option feedback-form__option--sights">
+                    <input class="visually-hidden feedback-form__input feedback-form__input-checkbox" type="checkbox" name="park" id="sight-park" checked>
+                    <label for="sight-park" class="feedback-form__label-options">Слайд-парк</label>
+                  </li>
+                  <li class="feedback-form__option feedback-form__option--sights">
+                    <input class="visually-hidden feedback-form__input feedback-form__input-checkbox" type="checkbox" name="rocks" id="sight-rocks">
+                    <label for="sight-rocks" class="feedback-form__label-options">Красные скалы</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="feedback-form__unit feedback-form__unit--description">
+                <label for="text-description">
+                  <legend class="feedback-form__title feedback-form__title--description">Опишите свои эмоции:</legend>
+                </label>
+                <p>
+                  <textarea class="feedback-form__text feedback-form__description" name="text" id="text-description" rows="5" placeholder="Опишите подробно все свои восторги "></textarea>
+                </p>
+              </fieldset>
+              <div class="feedback-form__wrap-legend">
+                <button class="feedback-form__button button" type="submit">Отправить отзыв</button>
+                <small class="feedback-form__legend">
+                  <sup>*</sup> — обязательные поля
+                </small>
+              </div>
+            </form>
+          </section>
         </div>
       </main>
 

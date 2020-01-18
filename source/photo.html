@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
 
@@ -47,7 +47,7 @@
       </header>
 
       <main class="page-main">
-        <div class="page-main__wrapper page-main__wrapper--inner">
+        <div class="page-main__wrapper page-main__wrapper--photo">
           <h1 class="page-main__title page-main__title--inner">Фото и видео</h1>
           <section class="gallery">
             <h2 class="visually-hidden">Фотогалерея</h2>
@@ -111,6 +111,23 @@
                 </div>
               </li>
             </ul>
+          </section>
+          <section class="video-presentation">
+            <h2 class="visually-hidden">Видеопрезентация</h2>
+            <b class="video-presentation__title">Все еще сомневаетесь?</b>
+            <p class="video-presentation__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+            <div class="video-presentation__picture">
+              <video class="video-presentation__video">
+              </video>
+            </div>
+            <div class="video-presentation__scale">
+              <button class="video-presentation__scale-button" type="button"><span class="visually-hidden">Перемотать</span></button>
+            </div>
+            <div class="video-presentation__panel">
+              <button class="video-presentation__replay-button" type="button"><span class="visually-hidden">Повторить</span></button>
+              <button class="video-presentation__subtitles-button" type="button"><span class="visually-hidden">Субтитры</span></button>
+              <button class="video-presentation__fullscreen-button" type="button"><span class="visually-hidden">Во весь экран</span></button>
+            </div>
           </section>
         </div>
       </main>

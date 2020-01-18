@@ -1,9 +1,17 @@
+.gallery {
+  margin-bottom: 10px;
+}
+
 .gallery__text {
   .text-mobile();
   margin-bottom: 51px;
 }
 
 @media (min-width: @tablet-width) {
+  .gallery {
+    margin-bottom: 66px;
+  }
+
   .gallery__list {
     display: flex;
     flex-wrap: wrap;
@@ -17,5 +25,11 @@
   .gallery__item:last-child {
     margin-right: auto;
     margin-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery {
+    margin-bottom: 70px;
   }
 }

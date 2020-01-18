@@ -6,7 +6,7 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
 
@@ -112,6 +112,20 @@
                 <p class="advantages__text advantages__text-container">Большинство едет в Гранд каньон и толпится там</p>
               </li>
             </ul>
+          </section>
+          <section class="search-hotel">
+            <h2 class="visually-hidden">Поиск гостиницы</h2>
+            <b class="search-hotel__title">ЗАИНТЕРЕСОВАЛИСЬ?</b>
+            <p class="search-hotel__text">Укажите предполагаемые даты поездки, <span class="nowrap-tablet">и мы покажем вам лучшие предложения гостиниц в седоне</span></p>
+            <button class="search-hotel__button button" type="button">Найти гостиницу</button>
+          </section>
+          <section class="sedona-map">
+            <h2 class="visually-hidden">Седона на карте</h2>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+              <img class="sedona-map__photo" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Карта">
+            </picture>
           </section>
         </div>
       </main>
