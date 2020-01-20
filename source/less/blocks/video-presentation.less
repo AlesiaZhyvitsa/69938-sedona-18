@@ -97,6 +97,7 @@
 
 .video-presentation__panel {
   position: relative;
+  display: flex;
   width: 280px;
   height: 66px;
   margin: 0 auto;
@@ -105,9 +106,10 @@
 }
 
 .video-presentation__replay-button {
-  position: absolute;
+  position: relative;
   top: 19px;
-  left: 20px;
+  margin-left: 20px;
+  margin-right: auto;
 
   width: 26px;
   height: 26px;
@@ -117,24 +119,39 @@
   cursor: pointer;
   border: none;
 
-  &::before {
-    content: "";
+  &:hover .video-presentation__replay-icon,
+  &:focus .video-presentation__replay-icon {
+    path {
+      fill: #333333;
+    }
+  }
 
-    position: absolute;
-    top: 3px;
-    left: 5px;
+  &:active .video-presentation__replay-icon {
+    opacity: 0.3;
 
-    width: 16px;
-    height: 20px;
+    path {
+      fill: #333333;
+    }
+  }
+}
 
-    background-image: url("../img/icon-video-replay.svg");
+.video-presentation__replay-icon {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+
+  width: 16px;
+  height: 20px;
+
+  path {
+    fill: #5c6870;
   }
 }
 
 .video-presentation__subtitles-button {
-  position: absolute;
+  position: relative;
   top: 23px;
-  right: 74px;
+  right: 0;
 
   width: 32px;
   height: 20px;
@@ -144,24 +161,40 @@
   cursor: pointer;
   border: none;
 
-  &::before {
-    content: "";
+  &:hover .video-presentation__subtitles-icon,
+  &:focus .video-presentation__subtitles-icon {
+    path {
+      fill: #333333;
+    }
+  }
 
-    position: absolute;
-    top: 0;
-    right: 0;
+  &:active .video-presentation__subtitles-icon {
+    opacity: 0.3;
 
-    width: 32px;
-    height: 20px;
+    path {
+      fill: #333333;
+    }
+  }
+}
 
-    background-image: url("../img/icon-video-subtitles.svg");
+.video-presentation__subtitles-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 32px;
+  height: 20px;
+
+  path {
+    fill: #5c6870;
   }
 }
 
 .video-presentation__fullscreen-button {
-  position: absolute;
+  position: relative;
   top: 23px;
-  right: 23px;
+  margin-left: 31px;
+  margin-right: 23px;
 
   width: 20px;
   height: 20px;
@@ -171,17 +204,32 @@
   cursor: pointer;
   border: none;
 
-  &::before {
-    content: "";
+  &:hover .video-presentation__fullscreen-icon,
+  &:focus .video-presentation__fullscreen-icon {
+    path {
+      fill: #333333;
+    }
+  }
 
-    position: absolute;
-    top: 0;
-    right: 0;
+  &:active .video-presentation__fullscreen-icon {
+    opacity: 0.3;
 
-    width: 20px;
-    height: 20px;
+    path {
+      fill: #333333;
+    }
+  }
+}
 
-    background-image: url("../img/icon-video-fullscreen.svg");
+.video-presentation__fullscreen-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  path {
+    fill: #5c6870;
   }
 }
 
@@ -245,28 +293,46 @@
 
   .video-presentation__replay-button {
     top: 32px;
-    left: 30px;
-
-    &::before {
-      background-image: url("../img/icon-video-replay-white.svg");
-    }
+    margin-left: 30px;
   }
 
   .video-presentation__subtitles-button {
     top: 36px;
-    right: 92px;
-
-    &::before {
-      background-image: url("../img/icon-video-subtitles-white.svg");
-    }
   }
 
   .video-presentation__fullscreen-button {
     top: 36px;
-    right: 41px;
+    margin-right: 41px;
+  }
 
-    &::before {
-      background-image: url("../img/icon-video-fullscreen-white.svg");
+  .video-presentation__replay-icon,
+  .video-presentation__subtitles-icon,
+  .video-presentation__fullscreen-icon {
+    path {
+      fill: #ffffff;
+    }
+  }
+
+  .video-presentation__replay-button:hover .video-presentation__replay-icon,
+  .video-presentation__replay-button:focus .video-presentation__replay-icon,
+  .video-presentation__subtitles-button:hover .video-presentation__subtitles-icon,
+  .video-presentation__subtitles-button:focus .video-presentation__subtitles-icon,
+  .video-presentation__fullscreen-button:hover .video-presentation__fullscreen-icon,
+  .video-presentation__fullscreen-button:focus .video-presentation__fullscreen-icon, {
+    opacity: 0.6;
+
+    path {
+      fill: #ffffff;
+    }
+  }
+
+  .video-presentation__replay-button:active .video-presentation__replay-icon,
+  .video-presentation__subtitles-button:active .video-presentation__subtitles-icon,
+  .video-presentation__fullscreen-button:active .video-presentation__fullscreen-icon {
+    opacity: 0.3;
+
+    path {
+      fill: #ffffff;
     }
   }
 }
