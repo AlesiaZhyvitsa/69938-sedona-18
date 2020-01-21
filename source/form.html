@@ -27,7 +27,7 @@
                   <a class="site-list__link">Форма отзыва</a>
                 </li>
                 <li class="site-list__item">
-                  <a class="site-list__link" href="#">HTML academy</a>
+                  <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML academy</a>
                 </li>
               </ul>
             </div>
@@ -57,11 +57,11 @@
                 <legend class="feedback-form__title feedback-form__title--name">Представьтесь:</legend>
                 <p>
                   <label for="user-name">ИМЯ*:</label>
-                  <input class="feedback-form__text" id="user-name" type="text" name="name" placeholder="Петр">
+                  <input class="feedback-form__text" id="user-name" type="text" name="name" placeholder="Петр" required>
                 </p>
                 <p>
                   <label for="user-surname">ФАМИЛИЯ*:</label>
-                  <input class="feedback-form__text" id="user-surname" type="text" name="surname" placeholder="Иванов">
+                  <input class="feedback-form__text" id="user-surname" type="text" name="surname" placeholder="Иванов" required>
                 </p>
                 <p>
                   <label for="user-patronymic">Отчество:</label>
@@ -73,11 +73,11 @@
                 <div class="feedback-form__wrap-contacts">
                   <p class="feedback-form__paragraph feedback-form__paragraph--phone">
                     <label class="feedback-form__label-contacts" for="user-phone"><span class="feedback-form__hidden-contacts">Контактный</span> телефон*:</label>
-                    <input class="feedback-form__text" id="user-phone" type="text" name="phone" placeholder="Введите телефон">
+                    <input class="feedback-form__text" id="user-phone" type="tel" name="phone" placeholder="Введите телефон" required pattern="^[0-11]">
                   </p>
                   <p class="feedback-form__paragraph feedback-form__paragraph--mail">
                     <label class="feedback-form__label-contacts" for="user-mail">Электронная почта*:</label>
-                    <input class="feedback-form__text" id="user-mail" type="text" name="mail" placeholder="Введите e-mail">
+                    <input class="feedback-form__text" id="user-mail" type="email" name="mail" placeholder="Введите e-mail" required>
                   </p>
                 </div>
               </fieldset>
@@ -120,9 +120,9 @@
                 </ul>
               </fieldset>
               <fieldset class="feedback-form__unit feedback-form__unit--description">
-                <label for="text-description">
-                  <legend class="feedback-form__title feedback-form__title--description">Опишите свои эмоции:</legend>
-                </label>
+                <legend class="feedback-form__title feedback-form__title--description">
+                  <label for="text-description">Опишите свои эмоции:</label>
+                </legend>
                 <p>
                   <textarea class="feedback-form__text feedback-form__description" name="text" id="text-description" rows="5" placeholder="Опишите подробно все свои восторги "></textarea>
                 </p>
@@ -141,7 +141,6 @@
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <b class="page-footer__hashtag title-accented">#VISITSEDONA</b>
-          <div class="page-footer__social social">
             <ul class="social__list list-reset">
               <li class="social__item">
                 <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"><span class="visually-hidden">Мы в Твиттере</span></a>
@@ -153,13 +152,28 @@
                 <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy"><span class="visually-hidden">Мы на Ютюб</span></a>
               </li>
             </ul>
-          </div>
           <div class="page-footer__copyright copyright">
             <b class="copyright__text">Разработано</b>
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <svg class="copyright__link-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34"><path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/></svg>
+              <span class="visually-hidden">HTML Academy</span>
+            </a>
           </div>
         </div>
       </footer>
+
+      <section class="modal modal--failure">
+        <h2 class="modal__title modal__title--failure">Что-то пошло не так!</h2>
+        <p class="modal__text modal__text--failure">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="modal__button modal__button--failure button" type="button">ОК</button>
+      </section>
+      <section class="modal modal--success">
+        <h2 class="modal__title modal__title--success">Ваш отзыв отправлен!</h2>
+        <p class="modal__text modal__text--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <div class="modal__wrap-button">
+          <button class="modal__button modal__button--success button" type="button">Закрыть окно</button>
+        </div>
+      </section>
     </div>
   </body>
 </html>

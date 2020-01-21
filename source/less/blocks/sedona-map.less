@@ -2,8 +2,36 @@
   margin-bottom: -20px;
 }
 
+.sedona-map__photo {
+  margin: 0;
+  padding: 0;
+}
+
+.sedona-map__photo--tablet,
+.sedona-map__photo--desktop {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .sedona-map {
     margin-bottom: -6px;
+  }
+
+  .sedona-map__photo--mobile {
+    display: none;
+  }
+
+  .sedona-map__photo--tablet {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .sedona-map__photo--tablet {
+    display: none;
+  }
+
+  .sedona-map__photo--desktop {
+    display: block;
   }
 }
