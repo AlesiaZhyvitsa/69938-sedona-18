@@ -53,6 +53,10 @@
       margin-right: auto;
     }
 
+    &:nth-child(3) {
+      margin-right: -5px;
+    }
+
     &:hover {
       background-color: #ffffff;
     }
@@ -80,5 +84,9 @@
 @media (min-width: @desktop-width) {
   .site-list__item {
     width: 238px;
+
+    &:nth-child(3) {
+      margin-right: 0;
+    }
   }
 }
