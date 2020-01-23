@@ -11,7 +11,9 @@
     <div class="site-background">
       <header class="page-header">
         <div class="page-header__wrapper">
-          <nav class="main-nav main-nav--closed main-nav--opened">
+
+          <!-- Модификатор для закрытого меню - closed, для открытого меню - opened, для меню при выключенных скриптах - nojs -->
+          <nav class="main-nav main-nav--nojs">
             <div class="main-nav__toggle-area">
               <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             </div>
@@ -52,7 +54,7 @@
           <section class="advantages">
             <h2 class="advantages__title">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
             <ul class="advantages__list sedona-list list-reset">
-              <li class="advantages__item authentic">
+              <li class="advantages__item sedona-list__item authentic">
                 <div class="advantages__flex-wrapper">
                   <div class="advantages__wrap advantages__item-container">
                     <h3 class="sedona-list__title advantages__text-container">Настоящий городок</h3>
@@ -80,7 +82,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="advantages__item">
+              <li class="advantages__item sedona-list__item">
                 <div class="advantages__flex-wrapper advantages__flex-wrapper--contra">
                   <div class="advantages__wrap advantages__item-container">
                     <h3 class="sedona-list__title advantages__text-container">Там есть Мост&nbsp;Дьявола</h3>
@@ -94,17 +96,17 @@
                   </picture>
                 </div>
               </li>
-              <li class="advantages__item advantages__item--colored advantages__item-container">
+              <li class="advantages__item advantages__item--colored advantages__item-container sedona-list__item">
                 <h3 class="sedona-list__title title-accented advantages__text-container">Небольшая площадь</h3>
                 <p class="advantages__text-number">— №3 —</p>
                 <p class="advantages__text advantages__text-container">Все интересные места находятся очень близко</p>
               </li>
-              <li class="advantages__item advantages__item--colored advantages__item-container">
+              <li class="advantages__item advantages__item--colored advantages__item-container sedona-list__item">
                 <h3 class="sedona-list__title title-accented advantages__text-container">Красивая дорога</h3>
                 <p class="advantages__text-number">— №4 —</p>
                 <p class="advantages__text advantages__text-container">Ехать в Седону из Лас-&nbsp;Вегаса совсем не&nbsp;скучно!</p>
               </li>
-              <li class="advantages__item advantages__item--colored advantages__item-container">
+              <li class="advantages__item advantages__item--colored advantages__item-container sedona-list__item">
                 <h3 class="sedona-list__title title-accented page-main__text-width">Мало туристов</h3>
                 <p class="advantages__text-number">— №5 —</p>
                 <p class="advantages__text advantages__text-container">Большинство едет в Гранд каньон и толпится там</p>
@@ -134,15 +136,15 @@
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <b class="page-footer__hashtag title-accented">#VISITSEDONA</b>
-            <ul class="social__list list-reset">
-              <li class="social__item">
-                <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"><span class="visually-hidden">Мы в Твиттере</span></a>
+            <ul class="social-list list-reset">
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--twitter" href="https://twitter.com/htmlacademy"><span class="visually-hidden">Мы в Твиттере</span></a>
               </li>
-              <li class="social__item">
-                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы в Фейсбуке</span></a>
               </li>
-              <li class="social__item">
-                <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy"><span class="visually-hidden">Мы на Ютюб</span></a>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/htmlacademy"><span class="visually-hidden">Мы на Ютюб</span></a>
               </li>
             </ul>
           <div class="page-footer__copyright copyright">
@@ -156,5 +158,6 @@
       </footer>
 
     </div>
+    <script src="js/picturefill.js"></script>
   </body>
 </html>
